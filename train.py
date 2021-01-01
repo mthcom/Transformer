@@ -63,7 +63,6 @@ def train_model(model, opt):
         ((time.time() - start)//60, epoch + 1, "".join('#'*(100//5)), "".join(' '*(20-(100//5))), 100, avg_loss, epoch + 1, avg_loss))
 
 def main():
-
     parser = argparse.ArgumentParser()
     parser.add_argument('-src_data', required=True)
     parser.add_argument('-trg_data', required=True)

@@ -9,7 +9,7 @@ class Embedder(nn.Module):
         self.d_model = d_model
         self.embed = nn.Embedding(vocab_size, d_model)
     def forward(self, x):
-        return self.embed(x)
+        return self.embed(x).to('cuda')
 
 class PositionalEncoder(nn.Module):
     def __init__(self, d_model, max_seq_len = 200, dropout = 0.1):
